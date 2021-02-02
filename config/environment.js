@@ -5,6 +5,9 @@ module.exports = function (environment) {
     modulePrefix: 'subscriptions-ember-apollo',
     environment,
     rootURL: '/',
+    apollo: {
+      apiURL: 'http://localhost:4003/api/graphql'
+    },
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
