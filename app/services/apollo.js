@@ -5,12 +5,9 @@ import { createAbsintheSocketLink } from '@absinthe/socket-apollo-link';
 import AbsintheSocket from '@absinthe/socket';
 
 class OverriddenApollo extends ApolloService {
-  @service
-  session;
-
   link() {
     const socket = new Socket("ws://localhost:4003/socket", {
-      params: { token: this.get('session.token') },
+      params: { foo: "bar" },
     });
     const absintheSocket = AbsintheSocket.create(socket);
 
